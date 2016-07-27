@@ -62,8 +62,13 @@ app.get('/:encoded_id', function(req, res){
   // check if url already exists in database
   Url.findOne({_id: id}, function (err, doc){
     if (doc) {
+      var urls = doc.long_url.split(",");
+      idx = [Math.floor(Math.random() * urls.length;
+      var url = urls[Math.floor(Math.random() * urls.length)];
+      console.log(req.params.encoded_id + " redirect to " + url + "(" + idx + "/" + urls.length + ")");
+
       res.writeHead(302, {
-        'Location': doc.long_url
+        'Location': url
       });
       res.end();
 
