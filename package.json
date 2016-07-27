@@ -1,16 +1,30 @@
 {
-  "name": "url-shortener",
+  "name": "ab-testing-url-shortener",
   "version": "1.0.0",
-  "description": "A NodeJS + Express + MongoDB based URL shortener",
+  "description": "Url shortener with AB testing feature using NodeJs, Express, and MongoDB",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "coligo.io",
-  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
     "mongoose": "4.2.9"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thithi32/ab-testing-url-shortener.git"
+  },
+  "keywords": [
+    "AB",
+    "testing",
+    "url",
+    "shortener"
+  ],
+  "author": "Thierry Delbart",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Thithi32/ab-testing-url-shortener/issues"
+  },
+  "homepage": "https://github.com/Thithi32/ab-testing-url-shortener#readme"
 }
