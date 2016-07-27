@@ -63,9 +63,9 @@ app.get('/:encoded_id', function(req, res){
   Url.findOne({_id: id}, function (err, doc){
     if (doc) {
       var urls = doc.long_url.split(",");
-      idx = [Math.floor(Math.random() * urls.length;
-      var url = urls[Math.floor(Math.random() * urls.length)];
-      console.log(req.params.encoded_id + " redirect to " + url + "(" + idx + "/" + urls.length + ")");
+      idx = Math.floor(Math.random() * urls.length);
+      var url = urls[idx];
+      console.log(req.params.encoded_id + " redirects to " + url + " (" + (idx + 1) + "/" + urls.length + ")");
 
       res.writeHead(302, {
         'Location': url
