@@ -14,19 +14,27 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-.btn-shorten {
+#form .btn {
   color: #ffffff;
   background-color: #F89406;
   border: none;
 }
 
-.btn-shorten:hover,
-.btn-shorten:focus,
-.btn-shorten:active,
-.btn-shorten.active {
+#form .btn:hover,
+#form .btn:focus,
+#form .btn:active,
+#form .btn.active {
   color: #ffffff;
   background-color: #FA8900;
   border: none;
+}
+
+#form .col {
+  margin-top: 15px;
+}
+
+#new_link {
+  display:none;
 }
 
 .site-wrapper {
