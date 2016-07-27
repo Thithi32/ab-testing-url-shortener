@@ -1,9 +1,6 @@
 var config = {};
 
-config.db = {};
-config.webhost = 'http://localhost:3000/';
-
-config.db.host = 'localhost';
-config.db.name = 'url_shortener';
+config.webhost = process.env.WEBHOST || 'http://localhost:3000/';
+config.db = process.env.MONGODB_URI || 'mongodb://localhost/url_shortener';
 
 module.exports = config;
