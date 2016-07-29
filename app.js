@@ -3,8 +3,11 @@ var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var Slack = require('slack-node');
+
 var config = require('./config');
 var base58 = require('./base58.js');
+
 
 // grab the url model
 var Url = require('./models/url');
@@ -51,6 +54,34 @@ app.post('/api/shorten', function(req, res){
 
   });
 
+});
+
+app.post('/contact', function(req,res){ 
+  webhookUri = "https://hooks.slack.com/services/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";
+   
+  message = {
+   "attachments":[
+      {
+         "pretext":"Message from: "+req.body.name+" "+req.body.email,
+         "color":"#00D000",
+         "fields":[
+            {
+               "value":req.body.comment,
+               "short":false
+            }
+         ]
+      }
+   ]
+  };
+
+  slack = new Slack();
+  slack.setWebhook(webhookUri);
+     
+  slack.webhook(message, function(err, response) {
+    console.log(response);
+  });
+
+  res.sendFile(path.join(__dirname, 'views/thanks.html'));
 });
 
 app.get('/:encoded_id', function(req, res){

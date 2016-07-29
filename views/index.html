@@ -67,16 +67,70 @@
 
         </div>
 
+        <div id="footer">
+          <a class="btn-contact" href="#contactModal" role="button" data-toggle="modal">Leave us a comment or suggestion</a>
+        </div>
+
       </div>
 
     </div>
 
   </div>
 
+  <div id="contactModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <form id="contact_form" class="" action="contact" method="post">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 id="contactModalLabel">We'd Love to Hear From You</h4>
+          </div>
+          <div class="modal-body form-horizontal">
+
+          <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input  name="name" placeholder="your name" class="form-control"  type="text">
+              </div>
+            </div>
+          </div>
+
+            <div class="form-group">
+              <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                    <textarea class="form-control" name="comment" placeholder="your message here.."></textarea>
+              </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                  <input name="email" placeholder="email@you.com (so that we can contact you)" class="form-control"  type="text">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
+            <button type="submit" class="btn btn-success pull-right">Send It!&nbsp;<span class="glyphicon glyphicon-send"></span></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>  
+
   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js"></script>
   <script src="javascripts/shorten.js"></script>
   <script src="javascripts/multifield.js"></script>
+  <script src="javascripts/form.js"></script>
+
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
