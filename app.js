@@ -62,6 +62,7 @@ app.post('/contact', function(req,res){
   message = {
    "attachments":[
       {
+         "fallback":"Message from "+req.body.name,
          "pretext":"Message from: "+req.body.name+" "+req.body.email,
          "color":"#00D000",
          "fields":[
